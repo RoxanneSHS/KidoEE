@@ -163,6 +163,11 @@ EXTEND_BOTTOM ~Ar0510.bcs~ ~Kido/scripts/Ar0510.baf~ EVALUATE_BUFFER
 
 EXTEND_BOTTOM ~Ar0400.bcs~ ~Kido/scripts/Ar0400.baf~ EVALUATE_BUFFER
 
+
+ACTION_IF (GAME_IS ~eet~) BEGIN
+EXTEND_BOTTOM ~Ar4000.bcs~ ~Kido/scripts/Ar4000.baf~
+END
+
 EXTEND_TOP ~Ar6200.bcs~ ~Kido/scripts/MWKidbio.baf~ EVALUATE_BUFFER
 
 EXTEND_TOP ~Anomen.bcs~ ~Kido/scripts/MWKidAn.baf~ EVALUATE_BUFFER

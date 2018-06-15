@@ -1,0 +1,9 @@
+IF
+InPartyAllowDead("MWKido")
+Global("KidoExistsToBJoin","ar4000",0)
+THEN
+RESPONSE #100
+SetGlobal("KidoExistsToBJoin","ar4000",1)
+ActionOverride("MWKido",ChangeAIScript("MWKids25",OVERRIDE))
+Continue()
+END
