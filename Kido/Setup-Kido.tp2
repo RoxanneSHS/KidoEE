@@ -1,0 +1,279 @@
+BACKUP ~Kido\Backup~
+//AUTHOR ~Deathsangel deathsangel@spellholdstudios.net~
+SUPPORT ~http://baldursextendedworld.com/Vanilla_Forums/categories/mod-help OR PaulaMigrate@mail.com~
+
+VERSION ~v8.0~
+
+AUTO_TRA ~Kido/%s~
+
+ALWAYS
+  
+ACTION_IF (GAME_IS ~eet~) BEGIN
+    
+OUTER_SET bg2_chapter = 12
+  END 
+ELSE BEGIN
+    OUTER_SET bg2_chapter = 0
+  END
+  
+OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+    
+OUTER_SET bg2_chapter = bg2_chapter + 1
+    
+OUTER_SPRINT name_source ~bg2_chapter_%i%~
+    
+OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+  
+END
+
+END
+
+
+LANGUAGE ~English~ ~english~ ~Kido\english\setup.tra~
+
+/************************************************************************
+ ************************************************************************
+ **                      Created by Guido Voets                        **
+ ************************************************************************
+ ************************************************************************/
+
+BEGIN @0
+
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~This mod is exclusive for EE games~
+
+COPY ~Kido\cre\MWKido.cre~ ~override\MWKido.cre~
+ SAY NAME1 @2
+ SAY NAME2 @2
+ SAY MORALE @3 
+ SAY HAPPY @4 
+ SAY UNHAPPY_ANNOYED @5 
+ SAY UNHAPPY_SERIOUS @6 
+ SAY UNHAPPY_BREAKING @7 
+ SAY BATTLE_CRY1 @8 
+ SAY LEADER @9 
+ SAY TIRED @10 
+ SAY BORED @11 
+ SAY HURT @12 
+ SAY SELECT_COMMON1 @13 
+ SAY SELECT_COMMON2 @14 
+ SAY SELECT_COMMON3 @15 
+ SAY SELECT_ACTION1 @16 
+ SAY SELECT_ACTION2 @17 
+ SAY SELECT_ACTION3 @18 
+ SAY DAMAGE @19 
+ SAY DYING @20 
+ SAY AREA_FOREST @21 
+ SAY AREA_CITY @22 
+ SAY AREA_DUNGEON @23 
+ SAY AREA_DAY @24 
+ SAY AREA_NIGHT @25 
+ SAY SELECT_ACTION4 @26 
+ SAY SELECT_ACTION5 @27 
+ SAY SELECT_ACTION6 @28 
+ SAY SELECT_RARE2 @29 
+ SAY CRITICAL_HIT @30 
+ SAY CRITICAL_MISS @31 
+ SAY TARGET_IMMUNE @32 
+ SAY INVENTORY_FULL @33 
+ SAY PICKED_POCKET @34 
+ SAY SPELL_DISRUPTED @35 
+ SAY BATTLE_CRY2 @36 
+ SAY BATTLE_CRY3 @37 
+ SAY SELECT_COMMON4 @38 
+ SAY SELECT_COMMON5 @39 
+ SAY SELECT_COMMON6 @40 
+ SAY SELECT_RARE1 @41 
+ SAY REACT_TO_DIE_GENERAL @42 
+ SAY BIO @43
+
+COPY ~Kido\cre\MWKido25.cre~ ~override\MWKido25.cre~
+ SAY NAME1 @2
+ SAY NAME2 @2
+ SAY MORALE @3 
+ SAY HAPPY @4 
+ SAY UNHAPPY_ANNOYED @5 
+ SAY UNHAPPY_SERIOUS @6 
+ SAY UNHAPPY_BREAKING @7 
+ SAY BATTLE_CRY1 @8 
+ SAY LEADER @9 
+ SAY TIRED @10 
+ SAY BORED @11 
+ SAY HURT @12 
+ SAY SELECT_COMMON1 @13 
+ SAY SELECT_COMMON2 @14 
+ SAY SELECT_COMMON3 @15 
+ SAY SELECT_ACTION1 @16 
+ SAY SELECT_ACTION2 @17 
+ SAY SELECT_ACTION3 @18 
+ SAY DAMAGE @19 
+ SAY DYING @20 
+ SAY AREA_FOREST @21 
+ SAY AREA_CITY @22 
+ SAY AREA_DUNGEON @23 
+ SAY AREA_DAY @24 
+ SAY AREA_NIGHT @25 
+ SAY SELECT_ACTION4 @26 
+ SAY SELECT_ACTION5 @27 
+ SAY SELECT_ACTION6 @28 
+ SAY SELECT_RARE2 @29 
+ SAY CRITICAL_HIT @30 
+ SAY CRITICAL_MISS @31 
+ SAY TARGET_IMMUNE @32 
+ SAY INVENTORY_FULL @33 
+ SAY PICKED_POCKET @34 
+ SAY SPELL_DISRUPTED @35 
+ SAY BATTLE_CRY2 @36 
+ SAY BATTLE_CRY3 @37 
+ SAY SELECT_COMMON4 @38 
+ SAY SELECT_COMMON5 @39 
+ SAY SELECT_COMMON6 @40 
+ SAY SELECT_RARE1 @41 
+ SAY REACT_TO_DIE_GENERAL @42 
+ SAY BIO @44
+
+COPY ~Kido/2da/Kidoend1.2da~ ~override~
+REPLACE ~99999~ @45
+
+COPY ~Kido/2da/Kidoend2.2da~ ~override~
+REPLACE ~99999~ @46
+
+COMPILE EVALUATE_BUFFER ~Kido/d/MWKid.d~
+COMPILE EVALUATE_BUFFER ~Kido/d/MWKidP.d~
+COMPILE EVALUATE_BUFFER ~Kido/d/MWBKid.d~
+COMPILE EVALUATE_BUFFER ~Kido/d/MWKidJ.d~
+COMPILE EVALUATE_BUFFER ~Kido/d/MWKid25.d~
+COMPILE EVALUATE_BUFFER ~Kido/d/MWKidP25.d~
+COMPILE EVALUATE_BUFFER ~Kido/d/MWBKid25.d~
+COMPILE EVALUATE_BUFFER ~Kido/d/MWKidJ25.d~
+COMPILE EVALUATE_BUFFER ~Kido/d/MWDolf.d~
+COMPILE EVALUATE_BUFFER ~Kido/d/MWKichc.d~
+
+COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKidSC.baf~
+COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKidS25.baf~
+COMPILE EVALUATE_BUFFER ~Kido/scripts/MWkdagRi.baf~
+COMPILE EVALUATE_BUFFER ~Kido/scripts/MWCySacr.baf~
+COMPILE EVALUATE_BUFFER ~Kido/scripts/MWDolf.baf~
+COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKichc.baf~
+COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKidfix.baf~
+COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKiQuC.baf~
+
+EXTEND_BOTTOM ~Ar0509.bcs~ ~Kido/scripts/Ar0509.baf~ EVALUATE_BUFFER
+
+EXTEND_BOTTOM ~Ar0510.bcs~ ~Kido/scripts/Ar0510.baf~ EVALUATE_BUFFER
+
+EXTEND_BOTTOM ~Ar0400.bcs~ ~Kido/scripts/Ar0400.baf~ EVALUATE_BUFFER
+
+EXTEND_TOP ~Ar6200.bcs~ ~Kido/scripts/MWKidbio.baf~ EVALUATE_BUFFER
+
+EXTEND_TOP ~Anomen.bcs~ ~Kido/scripts/MWKidAn.baf~ EVALUATE_BUFFER
+
+EXTEND_TOP ~Anom25.bcs~ ~Kido/scripts/MWKidA25.baf~ EVALUATE_BUFFER
+
+EXTEND_TOP ~Korgan.bcs~ ~Kido/scripts/MWKidKor.baf~ EVALUATE_BUFFER
+
+
+COPY_EXISTING ~AR0408.are~ ~override~
+  READ_LONG  0x54 "act_off"
+  READ_SHORT 0x58 "act_num"
+  FOR ( actor = ("%act_off%" + ("%act_num%" * 0x110)); actor >= "%act_off%"; actor = actor - 0x110 ) BEGIN
+    READ_ASCII ("%actor%" + 0x80) "creature"
+      PATCH_IF ("%creature%" STRING_COMPARE_CASE "SLILMAT" = 0) BEGIN
+       WRITE_ASCII ("%actor%" + 0x80) ~MWKIQUC~
+      END
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY ~Kido\cre\MWDolf.cre~ ~override\MWDolf.cre~
+SAY NAME1 @47
+SAY NAME2 @47
+
+COPY ~Kido\cre\MWKichc.cre~ ~override\MWKichc.cre~
+SAY NAME1 @48
+SAY NAME2 @48
+
+COPY ~Kido\cre\MWKichr.cre~ ~override\MWKichr.cre~
+SAY NAME1 @49
+SAY NAME2 @49
+
+COPY ~Kido\cre\MWKichm.cre~ ~override\MWKichm.cre~
+SAY NAME1 @50
+SAY NAME2 @50
+
+COPY ~Kido\cre\MWKicht.cre~ ~override\MWKicht.cre~
+SAY NAME1 @51
+SAY NAME2 @51
+
+COPY ~Kido\cre\MWKichw.cre~ ~override\MWKichw.cre~
+SAY NAME1 @52
+SAY NAME2 @52
+
+COPY ~Kido\cre\MWKiQuC.cre~ ~override\MWKiQuC.cre~
+SAY NAME1 @53
+SAY NAME2 @53
+
+COPY_EXISTING ~Arenthis.cre~ ~override~
+  WRITE_ASCII SCRIPT_GENERAL ~pries8b~
+
+COPY_EXISTING ~Dcleric.cre~ ~override~
+WRITE_ASCII 0x280 ~DCleric~
+
+COPY_EXISTING ~girl02.cre~ ~override~
+WRITE_ASCII 0x280 ~girl02~
+
+COPY_EXISTING ~ndog.cre~ ~override~
+WRITE_ASCII 0x280 ~ndog~
+
+COPY_EXISTING ~ndog.cre~ ~override/kdog.cre~
+SAY NAME1 @54
+SAY NAME2 @54
+WRITE_ASCII DEATHVAR ~kdog~
+
+COPY ~Kido\audio~ ~override~
+
+COPY ~Kido\items\mwkhood.itm~ ~override~
+SAY NAME1 @55
+SAY NAME2 @55
+SAY DESC @56
+SAY UNIDENTIFIED_DESC @57
+
+COPY ~Kido\items\mwkihosy.itm~ ~override~
+SAY NAME1 @58
+SAY NAME2 @58
+SAY DESC @59
+SAY UNIDENTIFIED_DESC @60
+
+COPY ~Kido\items\mwkdagg.itm~ ~override~
+SAY NAME1 @61
+SAY NAME2 @61
+SAY DESC @62
+SAY UNIDENTIFIED_DESC @63
+
+COPY ~Kido\items\mwikdagg.itm~ ~override~
+SAY NAME1 @61
+SAY NAME2 @61
+SAY DESC @64
+SAY UNIDENTIFIED_DESC @65
+
+COPY ~Kido\items\MWChSacr.itm~ ~override~
+SAY NAME1 @66
+SAY NAME2 @66
+SAY DESC @67
+SAY UNIDENTIFIED_DESC @67
+
+COPY ~Kido/Store/mwdolf.sto~  ~override/mwdolf.sto~
+  SAY 0xc @68
+
+APPEND ~pdialog.2da~
+~MWKido      MWKidP      MWKidJ      MWKidD      MWKidP25      MWKidJ25      MWKidD25      MWKid25~
+UNLESS ~MWKido~
+
+APPEND ~interdia.2da~
+~MWKido      MWBKid      MWBKid25~
+UNLESS ~MWKido~
+
+PRINT ~ INSTALLING OF PORTRAITS BY ENKIDA~
+
+COPY ~Kido\portraits~ ~override~
+
+ADD_JOURNAL @220 USING ~Kido/%s/MWKidJ.tra~
+ADD_JOURNAL @19 @21 @24 @38 @39 @43 @45 @53 @54 @55 @80 USING ~Kido/%s/MWdolf.tra~

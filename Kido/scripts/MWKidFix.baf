@@ -1,0 +1,63 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+      CutSceneID("MWKido")
+      SetName(~Kido~)
+  SetPlayerSound(Myself,~If you don't mind, I'll think I'll start running!~ [MWKido1],MORALE)
+  SetPlayerSound(Myself,~Ahh, what a wonderfull life we lead.~ [MWKido2],HAPPY)
+  SetPlayerSound(Myself,~I think it is time to take a different course of action.~ [MWKido3],UNHAPPY_ANNOYED)
+  SetPlayerSound(Myself,~Change our course of action now or I will leave!~ [MWKido4],UNHAPPY_SERIOUS)
+  SetPlayerSound(Myself,~I've had it! I'm gone!~ [MWKido5],UNHAPPY_BREAKING_POINT)
+  SetPlayerSound(Myself,~Throwing daggers away...~ [MWKido6],BATTLE_CRY1)
+  SetPlayerSound(Myself,~Now we can cause some real mayhem in the name of Cyric. Oooh, this is really going be fun!~ [MWKido7],LEADER)
+  SetPlayerSound(Myself,~(yawn) I've done enough jest's for today.~ [MWKido8],TIRED)
+  SetPlayerSound(Myself,~In the name of Cyric let's move on!~ [MWKido9],BORED)
+  SetPlayerSound(Myself,~A healing potion would be nice!~ [MWKido10],HURT)
+  SetPlayerSound(Myself,~Cyric be praised!~ [MWKido11],SELECT_COMMON1)
+  SetPlayerSound(Myself,~What is it that you wish?~ [MWKido12],SELECT_COMMON2)
+  SetPlayerSound(Myself,~The Highest of High, The Black Sun, The Dark Sun, Cyric be the one.~ [MWKido13],SELECT_COMMON3)
+  SetPlayerSound(Myself,~With uttermost pleasure.~ [MWKido14],SELECT_ACTION1)
+  SetPlayerSound(Myself,~As you desire.~ [MWKido15],SELECT_ACTION2)
+  SetPlayerSound(Myself,~Ah, yes. I am sure that Cyric would approve of that.~ [MWKido16],SELECT_ACTION3)
+  SetPlayerSound(Myself,~Auw~ [MWKido17],DAMAGE)
+  SetPlayerSound(Myself,~Cyric here I come.~ [MWKido18],DYING)
+  SetPlayerSound(Myself,~Oh no, there is no-one here to toy with.~ [MWKido19],AREA_FOREST)
+  SetPlayerSound(Myself,~Ooh, so many people to toy with.~ [MWKido20],AREA_CITY)
+  SetPlayerSound(Myself,~It's so damp in here and there is no-one to toy with.~ [MWKido21],AREA_DUNGEON)
+  SetPlayerSound(Myself,~Oh how lovely, another sunny day.~ [MWKido22],AREA_DAY)
+  SetPlayerSound(Myself,~We better watch out. At night all the madmen come out to play.~ [MWKido23],AREA_NIGHT)
+  SetPlayerSound(Myself,~I am right on it.~ [MWKido24],SELECT_ACTION4)
+  SetPlayerSound(Myself,~As that of Cyric, your will is my command.~ [MWKido25],SELECT_ACTION5)
+  SetPlayerSound(Myself,~Your average friendly wackoo will do as you tell him, guaranteed!~ [MWKido26],SELECT_ACTION6)
+  SetPlayerSound(Myself,~Oh goodie good an assignment for me!~ [MWKido27],SELECT_RARE2)
+  SetPlayerSound(Myself,~Cyric is with me!~ [MWKido28],CRITICAL_HIT)
+  SetPlayerSound(Myself,~Whoops, my mistake!~ [MWKido29],CRITICAL_MISS)
+  SetPlayerSound(Myself,~Well this is pure madness!~ [MWKido30],TARGET_IMMUNE)
+  SetPlayerSound(Myself,~I really can't carry this!~ [MWKido31],INVENTORY_FULL)
+  SetPlayerSound(Myself,~This person has nothing more to loose.~ [MWKido32],PICKED_POCKET)
+  SetPlayerSound(Myself,~Ooh, there goes my spell!~ [MWKido33],SPELL_DISRUPTED)
+  SetPlayerSound(Myself,~It's time to play a tune.~ [MWKido34],BATTLE_CRY2)
+  SetPlayerSound(Myself,~Time to dance!~ [MWKido35],BATTLE_CRY3)
+  SetPlayerSound(Myself,~Oempa Loempa Dample Dee Dee, if you are wise, you would not listen to me!~ [MWKido36],SELECT_COMMON4)
+  SetPlayerSound(Myself,~Oempa Loempa Dample Dee Da, with my own songs, I've killed my own ma!~ [MWKido37],SELECT_COMMON5)
+  SetPlayerSound(Myself,~On which person shall I next play a prank?~ [MWKido38],SELECT_COMMON6)
+  SetPlayerSound(Myself,~If that is what you wish. Very well I'll do it.~ [MWKido39],SELECT_RARE1)
+  SetPlayerSound(Myself,~Well I guess I'll say... goodbye!~ [MWKido40],REACT_TO_DIE_GENERAL)
+  EndCutSceneMode()
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

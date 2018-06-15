@@ -1,0 +1,7 @@
+IF
+ Global("Nagdog","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Nagdog","GLOBAL",1)
+ CreateCreature("kdog",[768.1742],11)
+END

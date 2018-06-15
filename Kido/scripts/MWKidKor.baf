@@ -1,0 +1,16 @@
+IF
+InParty(Myself)
+See(Player1)
+InParty("MWKido")
+CombatCounter(0)
+!AreaType(CITY)
+PartyRested()
+Global("MWBKKO3","GLOBAL",1)
+Global("KorMDKKid","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("KorMDKKid","GLOBAL",2)
+ActionOverride("MWKido",Kill(Myself))
+FaceObject(Player1)
+Dialog(Player1)
+END

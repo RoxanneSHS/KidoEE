@@ -1,0 +1,15 @@
+IF
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+!AreaType(DUNGEON)
+Dead("MWKido")
+Global("KandAcombat","GLOBAL",1)
+Global("finalconAak","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("finalconAak","GLOBAL",1)
+FaceObject(Player1)
+Dialog(Player1)
+END

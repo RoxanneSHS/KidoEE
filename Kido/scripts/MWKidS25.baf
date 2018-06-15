@@ -1,0 +1,167 @@
+IF 
+  HotKey(T) 
+THEN 
+  RESPONSE #100 
+    StartCutSceneMode() 
+    StartCutScene("MWKIDFIX") 
+END
+
+IF
+LevelGT(Myself,27)
+!Global("gotkhosy","LOCALS",1)
+Global("gotkhosy25","LOCALS",0)
+THEN
+RESPONSE #100
+CreateItem("MWkihosy",1,0,0)
+CreateVisualEffectObject("SPDISPMA","MWKido")
+DisplayStringHead(Myself, ~Once again Kido defiles the rules, because Kido just received a powerful holy symbol from Cyric. It is especially made to suit Kido's special qualities.~)
+SetGlobal("gotkhosy25","LOCALS",1)
+END
+
+IF
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("METBAL","GLOBAL",1)
+Global("kidoknowbal","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("kidoknowbal","GLOBAL",1)
+FaceObject(Player1)
+Dialog(Player1)
+END
+
+IF
+InParty(Myself)
+!Global("MWKTellCharname","LOCALS",1)
+Global("MWKTellCharname25","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("MWKTellCharname25","LOCALS",1)
+SetGlobalTimer("KidoStory25","GLOBAL",THREE_DAYS)
+END
+
+IF
+InParty(Myself)
+GlobalTimerExpired("KidoStory25","GLOBAL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+!AreaType(DUNGEON)
+!Global("kidohistory","GLOBAL",2)
+Global("kidohistory25","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobalTimer("Kido_Tale5","GLOBAL",TWO_DAYS)
+SetGlobal("kidohistory25","GLOBAL",1)
+FaceObject(Player1)
+Dialog(Player1)
+END
+
+IF
+InParty(Myself)
+GlobalTimerExpired("Kido_Tale5","GLOBAL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+!AreaType(DUNGEON)
+!Global("weareone","GLOBAL",2)
+OR (2)
+Global("kidohistory25","GLOBAL",2)
+Global("kidohistory","GLOBAL",2)
+Global("weareone25","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("weareone25","GLOBAL",1)
+SetGlobalTimer("Kido_Tale6","GLOBAL",TWO_DAYS)
+SetGlobalTimer("Kido_Tale7","GLOBAL",FIVE_DAYS)
+FaceObject(Player1)
+Dialog(Player1)
+END
+
+IF
+InParty(Myself)
+GlobalTimerExpired("Kido_Tale6","GLOBAL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+!AreaType(DUNGEON)
+!Global("secweareone","GLOBAL",2)
+Global("Undecided25","GLOBAL",1)
+OR (2)
+Global("weareone","GLOBAL",2)
+Global("weareone25","GLOBAL",2)
+Global("secweareone25","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("secweareone25","GLOBAL",1)
+FaceObject(Player1)
+Dialog(Player1)
+END
+
+IF
+InParty(Myself)
+GlobalTimerExpired("Kido_Tale7","GLOBAL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+!AreaType(DUNGEON)
+!Global("plansunfold","GLOBAL",2)
+OR (2)
+Global("weareone","GLOBAL",2)
+Global("weareone25","GLOBAL",2)
+Global("plansunfold25","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("plansunfold25","GLOBAL",1)
+FaceObject(Player1)
+Dialog(Player1)
+END
+
+IF
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+AreaCheck("AR5000")
+Global("notsopitoresque","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("notsopitoresque","GLOBAL",1)
+FaceObject(Player1)
+Dialog(Player1)
+END
+
+IF
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+!AreaType(DUNGEON)
+Dead("Anomen")
+Global("KandAcombat25","GLOBAL",1)
+Global("finalconKaAn25","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("finalconKaAn25","GLOBAL",1)
+FaceObject(Player1)
+Dialog(Player1)
+END
+
+IF
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+!AreaType(DUNGEON)
+OR(2)
+Global("kidohistory25","GLOBAL",2)
+Global("kidohistory","GLOBAL",2)
+Global("Kidoishome","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("Kidoishome","GLOBAL",1)
+FaceObject(Player1)
+Dialog(Player1)
+END

@@ -1,0 +1,11 @@
+IF
+See(Player1)
+AreaCheck("AR0408")
+Global("Kiwantsdoquest","GLOBAL",4)
+Global("TellPlKidoDead","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("TellPlKidoDead","GLOBAL",1)
+FaceObject(Player1)
+Dialog(Player1)
+END

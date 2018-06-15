@@ -1,0 +1,10 @@
+IF
+ Global("KidoExists","AR0509",0)
+ Global("KidoCreated","GLOBAL",0)
+ Global("HaerDalisFree","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("KidoExists","AR0509",1)
+ SetGlobal("KidoCreated","GLOBAL",1)
+ CreateCreature("MWKido",[568.712],11)
+END

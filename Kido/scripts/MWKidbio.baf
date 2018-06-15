@@ -1,0 +1,25 @@
+IF
+Global("StartEndBios","AR6200",1)
+InParty("MWKido")
+Global("PlayerChoseEssence","GLOBAL",1)
+Global("KidoBio","GLOBAL",0)
+THEN
+RESPONSE #100
+ SetGlobal("KidoBio","GLOBAL",1)
+ TextScreen("KIDOEND1")
+ SmallWait(1)
+ Continue()
+END
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("MWKido")
+Global("PlayerChoseEssence","GLOBAL",0)
+Global("KidoBio","GLOBAL",0)
+THEN
+RESPONSE #100
+ SetGlobal("KidoBio","GLOBAL",1)
+ TextScreen("KIDOEND2")
+ SmallWait(1)
+ Continue()
+END
