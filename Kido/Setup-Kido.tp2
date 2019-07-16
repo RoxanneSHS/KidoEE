@@ -157,24 +157,31 @@ COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKichc.baf~
 COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKidfix.baf~
 COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKiQuC.baf~
 
-EXTEND_BOTTOM ~Ar0509.bcs~ ~Kido/scripts/Ar0509.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~Ar0509.bcs~ ~Kido/scripts/Ar0509.baf~
+ EVALUATE_BUFFER
 
-EXTEND_BOTTOM ~Ar0510.bcs~ ~Kido/scripts/Ar0510.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~Ar0510.bcs~ ~Kido/scripts/Ar0510.baf~
+ EVALUATE_BUFFER
 
-EXTEND_BOTTOM ~Ar0400.bcs~ ~Kido/scripts/Ar0400.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~Ar0400.bcs~ ~Kido/scripts/Ar0400.baf~
+ EVALUATE_BUFFER
 
 
 ACTION_IF (GAME_IS ~eet~) BEGIN
 EXTEND_BOTTOM ~Ar4000.bcs~ ~Kido/scripts/Ar4000.baf~
 END
 
-EXTEND_TOP ~Ar6200.bcs~ ~Kido/scripts/MWKidbio.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~Ar6200.bcs~ ~Kido/scripts/MWKidbio.baf~
+ EVALUATE_BUFFER
 
-EXTEND_TOP ~Anomen.bcs~ ~Kido/scripts/MWKidAn.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~Anomen.bcs~ ~Kido/scripts/MWKidAn.baf~
+ EVALUATE_BUFFER
 
-EXTEND_TOP ~Anom25.bcs~ ~Kido/scripts/MWKidA25.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~Anom25.bcs~ ~Kido/scripts/MWKidA25.baf~
+ EVALUATE_BUFFER
 
-EXTEND_TOP ~Korgan.bcs~ ~Kido/scripts/MWKidKor.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~Korgan.bcs~ ~Kido/scripts/MWKidKor.baf~
+ EVALUATE_BUFFER
 
 
 COPY_EXISTING ~AR0408.are~ ~override~
@@ -240,6 +247,7 @@ SAY NAME1 @55
 SAY NAME2 @55
 SAY DESC @56
 SAY UNIDENTIFIED_DESC @57
+SAY 0xce Kido
 
 COPY ~Kido\items\mwkihosy.itm~ ~override~
 SAY NAME1 @58
@@ -252,6 +260,7 @@ SAY NAME1 @61
 SAY NAME2 @61
 SAY DESC @62
 SAY UNIDENTIFIED_DESC @63
+SAY 0x196 Kido
 
 COPY ~Kido\items\mwikdagg.itm~ ~override~
 SAY NAME1 @61
