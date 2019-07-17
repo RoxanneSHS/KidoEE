@@ -88,9 +88,7 @@ Damage: 1d4+1
 Weight: 1
 Speed Factor: 2
 Proficiency Type: Dagger
-Type: Ranged
-Only Usable By:
-Kido~
+Type: Ranged~
 @63   = ~Kido laughs as you ask him where he got his dagger from. "I'm not telling youuu! Everyone has it's secrets and this is mine!"~
 @64   = ~Kido's Dagger
 It seems that the 'blessing' of an evil deity can be quite a handy thing to be given, for Kido's personal throwing dagger has grown with malice power. After the ritual Dolf, the Cyric cleric in the slums district, performed to imbue the weapon with Cyric's 'blessing', the dagger can hurt almost any foe and it's stunning power has become harder to resist.
@@ -105,9 +103,7 @@ Damage: 1d4+3
 Weight: 1
 Speed Factor: 2
 Proficiency Type: Dagger
-Type: Ranged
-Only Usable By:
-Kido~
+Type: Ranged~
 @65   = ~It seems that the 'blessing' of an evil deity can be quite a handy thing to be given, for Kido's personal throwing dagger has grown with malice power. After the ritual Dolf, the Cyric cleric in the slums district, performed to imbue the weapon with Cyric's 'blessing', the dagger can hurt almost any foe and it's stunning power has become harder to resist.~
 @66   = ~Little girl's body~
 @67   = ~This is the body of the little girl you have kidnapped by knocking her unconscious.~
