@@ -156,6 +156,7 @@ COMPILE EVALUATE_BUFFER ~Kido/scripts/MWDolf.baf~
 COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKichc.baf~
 COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKidfix.baf~
 COMPILE EVALUATE_BUFFER ~Kido/scripts/MWKiQuC.baf~
+COMPILE ~Kido/scripts/SLImat.baf~
 
 EXTEND_BOTTOM ~Ar0509.bcs~ ~Kido/scripts/Ar0509.baf~
  EVALUATE_BUFFER

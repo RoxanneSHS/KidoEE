@@ -339,7 +339,7 @@ GiveItemCreate("MWChSacr","MWKido",1,1,0)
 END
 
 IF
-Allegiance("Dolf",ENEMY)
+Allegiance("MWDolf",ENEMY)
 THEN
 RESPONSE #100
 ActionOverride("MWKido",LeaveParty())

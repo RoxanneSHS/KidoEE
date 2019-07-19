@@ -1,0 +1,30 @@
+IF
+See([PC])
+Range([PC],10)
+Global("SpawnHabib","GLOBAL",5)
+!Dead("Habib")
+!Global("Kidopersonalquest","GLOBAL",1)
+THEN
+RESPONSE #100
+ClearAllActions()
+SetInterrupt(FALSE)
+DialogInterrupt(FALSE)
+CreateCreature("HABIB2",[155.301],NE)
+SetGlobal("SpawnHabib","GLOBAL",6)
+ActionOverride("habib",DisplayStringHead(Myself,41825))  
+ActionOverride("habib",AttackOneRound([PC]))
+ActionOverride("habib",SetGlobal("SpawnHabib","GLOBAL",7))
+ActionOverride("habib",EscapeArea())
+Wait(1)
+DialogInterrupt(TRUE)
+SetInterrupt(TRUE)
+END
+
+IF
+See([PC])
+Global("SpawnHabib","GLOBAL",7)
+THEN
+RESPONSE #100
+SetGlobal("SpawnHabib","GLOBAL",8)
+StartDialogueNoSet([PC])
+END
