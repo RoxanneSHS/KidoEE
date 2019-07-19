@@ -498,10 +498,10 @@ I_C_T FFBART 0 BurpsaysbyeKido
 END
 
 EXTEND_BOTTOM RAELIS 37
-IF ~InParty("MWKido") See("MWKido")~ THEN EXTERN MWKIDJ nowishrefund
+IF ~InParty("MWKido") See("MWKido") !Dead("MWKido")~ THEN EXTERN MWKIDJ nowishrefund
 END
 
-CHAIN IF ~InParty("MWKido") !Dead("MWKido")~ THEN MWKIDJ nowishrefund
+CHAIN IF ~~ THEN MWKIDJ nowishrefund
  @231
  == RAELIS IF ~InParty("MWKido") !Dead("MWKido")~ THEN @232
  == MWKIDJ IF ~InParty("MWKido") !Dead("MWKido")~ THEN @233
@@ -746,13 +746,11 @@ IF ~InParty("MWKido") !Dead("MWKido") InParty("Yoshimo")~ THEN REPLY @323 EXTERN
 END
 
 EXTEND_TOP PPDESH 19 #3
-IF ~InParty("MWKido") !Dead("MWKido") InParty("Yoshimo")~ THEN REPLY @324 EXTERN MWKIDJ yoshtryrecon
+IF ~InParty("MWKido") !Dead("MWKido") InParty("Yoshimo")!StateCheck(Player1,CD_STATE_NOTVALID)~ THEN REPLY @324 EXTERN MWKIDJ yoshtryrecon
 END
 
 CHAIN
-IF ~InParty(Player1)
-  See(Player1)
-  !StateCheck(Player1,CD_STATE_NOTVALID)~ THEN MWKIDJ yoshtryrecon
+IF ~~ THEN MWKIDJ yoshtryrecon
   @325
  == YOSHJ @326
 END
@@ -769,9 +767,7 @@ IF ~InParty("MWKido") !Dead("MWKido") !InParty("Yoshimo")~
 THEN REPLY @324 EXTERN MWKIDJ kidogotgridea
 END
 
-CHAIN IF ~InParty(Player1)
-See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID)~ THEN MWKIDJ kidogotgridea
+CHAIN IF ~~ THEN MWKIDJ kidogotgridea
 @329
 = @330
 = @331
@@ -968,10 +964,7 @@ THEN REPLY @391 DO ~ActionOverride("MWKiQuC",Enemy()) Attack("MWKiQuC")~ EXIT
 END
 
 APPEND MWKIDJ
-IF ~InParty(Player1)
-  See(Player1)
-  !StateCheck(Player1,CD_STATE_NOTVALID)
-Global("notthatlore","GLOBAL",1)~ THEN BEGIN notthatlore
+IF ~~ THEN BEGIN notthatlore
   SAY @392
   IF ~~ THEN REPLY @393 DO ~SetGlobal("notthatlore","GLOBAL",2)~ EXTERN GORCAR 16
   IF ~~ THEN REPLY @394 DO ~SetGlobal("notthatlore","GLOBAL",2)~ EXTERN GORCAR 16

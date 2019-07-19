@@ -1,4 +1,4 @@
-IF 
+IF
   HotKey(T) 
 THEN 
   RESPONSE #100 
@@ -271,8 +271,6 @@ RESPONSE #100
 SetGlobal("Kidopersonalquest","GLOBAL",2)
 CreateCreature("MWDolf",[-1.-1],0)
 MoveToPointNoInterrupt([426.285])
-MoveViewObject("MWDolf",INSTANT)
-ActionOverride("MWDolf",FaceObject("MWKido")) 
 END
 
 IF
