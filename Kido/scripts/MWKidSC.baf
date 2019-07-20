@@ -240,11 +240,8 @@ CombatCounter(0)
 Global("Nagdog","GLOBAL",1)
 THEN
 RESPONSE #100
-Wait(10)
 SetGlobal("Nagdog","GLOBAL",2)
 DisplayStringWait("MWKido",~Ahh, a cute little doggie...~)
-Wait(1)
-Playsound("MWKido70")
 Wait(2)
 ActionOverride("kdog",enemy())
 END
