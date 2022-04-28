@@ -7,7 +7,7 @@ style='font-size:12.0pt;font-family:"Times New Roman",serif'>Kido</span></b></p>
 
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'><img
-width=166 height=260 id="Picture 1" src="kido.jpg"
+width=166 height=260 id="Picture 1" src="Kido.jpg"
 ></span></p>
 
 <p class=MsoNormal style='line-height:normal'><b><span lang=EN-US
