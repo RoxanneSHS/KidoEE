@@ -30,6 +30,7 @@ END
 
 
 LANGUAGE ~English~ ~english~ ~Kido\english\setup.tra~
+LANGUAGE ~Schinese~ ~schinese~ ~Kido\schinese\setup.tra~
 
 /************************************************************************
  ************************************************************************
